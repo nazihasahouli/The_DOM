@@ -1,0 +1,336 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(Image.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 1rem;
+ }
+
+ #new-task-form {
+    display: flex;
+ }
+
+ input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+ }
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: black;
+    font-size: 1.25rem;
+}
+
+#new-task-input::placeholder {
+    color: gray;
+}
+
+#new-task-submit {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: blue;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+    
+}
+
+#tasks .task .content .text {
+    color: black;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: blue;
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    color: gray;
+}
+
+.task .actions .delete {
+    color: crimson;
+}
+
+/* #wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  }
+
+.task1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.task2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: burlywood;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.task3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: burlywood;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.task4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: burlywood;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.task5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: burlywood;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.task1 #edit-btn {
+    margin-left: 165px;
+}
+
+.task2 #edit-btn {
+    margin-left: 95px;
+}
+
+.task3 #edit-btn {
+    margin-left: 110px;
+}
+
+.task4 #edit-btn {
+    margin-left: 120px;
+}
+
+.task5 #edit-btn {
+    margin-left: 90px;
+} 
+
+#wrapper #edit-btn {
+    width: 55px;
+    height: 40px;
+    background: grey;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 600;
+}
+
+#wrapper #edit-btn:hover {
+    opacity: 0.8;
+}
+
+#wrapper #edit-btn:active{
+    opacity: 0.6;
+}
+
+#wrapper #delete-btn {
+    width: 60px;
+    height: 40px;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 600;
+}
+
+#wrapper #delete-btn:hover {
+    opacity: 0.8;
+}
+
+#wrapper #delete-btn:active{
+    opacity: 0.6;
+}
+
+#add-btn {
+    width: 55px;
+    height: 30px;
+    background: blue;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 600;
+    margin-right: 95px;
+}
+
+#add-btn:hover {
+    opacity: 0.8;
+}
+
+#add-btn:active{
+    opacity: 0.6;
+}
+
+#add-tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 15px;
+    max-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+#add-tasks input {
+    width: 60%;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 15px; 
+    margin-left: 90px;
+}  */
